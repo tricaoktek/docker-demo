@@ -1,21 +1,23 @@
 name: Greet everyone
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - develop
 
 jobs:
   build:
     # Job name is Greeting
-    name: Greeting
+    name: Test
     # This job runs on linux
     runs-on: ubuntu-latest
     steps:
-      # This step uses Github's hello-world-javascript-action:
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
+      - name: test
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
         with:
-          who-to-greet: 'Tri dap chai'
-        id: hello
-
-      # This step prints an output (time) from the previous step's action.
-      - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.output.time }}'
+          node-version: '12.x'
+      - run: npm install
+      - run: npm test
+        id: test-step
