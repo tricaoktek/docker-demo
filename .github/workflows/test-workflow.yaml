@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-    # Job name is Greeting
     name: Test
     # This job runs on linux
     runs-on: ubuntu-latest
