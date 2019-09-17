@@ -13,11 +13,9 @@ jobs:
     # This job runs on linux
     runs-on: ubuntu-latest
     steps:
-      - name: test
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+      - name: test
+        uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: npm install
       - run: npm test
-        id: test-step
