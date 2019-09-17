@@ -2,7 +2,7 @@ name: Greet everyone
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
-job:
+jobs:
   build:
     # Job name is Greeting
     name: Greeting
