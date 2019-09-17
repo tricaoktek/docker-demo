@@ -1,2 +1,2 @@
 # docker-demo
-![](https://github.com/actions/hello-world/workflows/Greet%20Everyone/badge.svg)
+![](https://github.com/tricaoktek/docker-demo/workflows/.github/workflows/test-workflow.yaml/badge.svg)
